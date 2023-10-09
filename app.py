@@ -6,7 +6,8 @@ app = Flask(__name__, static_folder='static', template_folder='static/templates'
 
 @app.route('/', methods=['GET'])
 def index():
-    return send_file("static/templates/index.html", mimetype='text/html')
+    # return send_file("static/templates/index.html", mimetype='text/html')
+    return render_template("index.html")
     # return render_template("index.html")
 
 
