@@ -1,0 +1,40 @@
+/* --------------------------- Allgemein --------------------------- */
+
+html {
+    background-color: #0D1117;
+}
+body {
+    color: #E6EDF3;
+    background-color: #0D1117;
+    margin: 10px;
+}
+
+h1, h2 {
+    display: table;
+    margin: 0 auto;
+}
+
+/*----------------------------- IDs --------------------------------- */
+
+
+/*----------------------------- Classes ----------------------------- */
+
+.center {
+    display: table;
+    margin: 0 auto;
+    width: 60vw
+}
+
+.makeCenter {
+    display: table;
+    margin: 0 auto;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+/*----------------------------- Names ------------------------------- */
+
+
+
