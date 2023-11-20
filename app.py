@@ -14,7 +14,11 @@ def index():
 @app.route('/beerpong-turnier', methods=['GET'])
 def beerpong_turnier():
     return send_file("static/templates/beerpong-turnier.html", mimetype='text/html')
-    pass
+
+
+@app.route('/tournament-bracket', methods=['GET'])
+def tournament_bracket():
+    return send_file("static/templates/tournament-bracket.html", mimetype='text/html')
 
 
 if __name__ == '__main__':
