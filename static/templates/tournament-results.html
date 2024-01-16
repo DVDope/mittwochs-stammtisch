@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="static/styles/myStyle.css"/>
+  <link rel="stylesheet" type="text/css" href="static/styles/tournamentResults.css"/>
+
+  <title>Ergebnisübersicht</title>
+  <script src="static/scripts/tournament-results.js"></script>
+</head>
+<body>
+
+  <div ng-controller="tournament-results-controller">
+    <div class="year-list">
+      <ul>
+        <li ng-repeat="year in years" ng-click="selectedYear(year)" ng-class="{ 'selected': selectedYear === year }">{{ year }}</li>
+      </ul>
+    </div>
+    <div class="image-container">
+      <img ng-src="{{ getImageUrl(selectedYear) }}" alt="Image for {{ selectedYear }}">
+    </div>
+  </div>
+
+</body>
+</html>
