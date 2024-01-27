@@ -8,6 +8,7 @@ app = Flask(__name__, static_folder='static', template_folder='static/templates'
 @app.route('/', methods=['GET'])
 def index():
     return render_template("index.html")
+    # return "<p>Hello world</p>"
 
 
 @app.route('/bpt', methods=['GET'])
