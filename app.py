@@ -1,5 +1,7 @@
 from flask import Flask, render_template, send_file
 
+from waitress import serve
+
 import helper_functions
 
 app = Flask(__name__, static_folder='static', template_folder='static/templates')
@@ -8,6 +10,7 @@ app = Flask(__name__, static_folder='static', template_folder='static/templates'
 @app.route('/', methods=['GET'])
 def index():
     return render_template("index.html")
+    # return "<p>Hello world</p>"
 
 
 @app.route('/bpt', methods=['GET'])
@@ -29,4 +32,6 @@ def tournament_bracket():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    # app.run(debug=False)
+
+    serve(app, listen='*:8080')
